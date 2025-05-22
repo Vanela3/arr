@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main () {
+   int a[5],i;
+   for (i=0;i<5;i++){
+       printf("enter array elements :");
+       scanf("%d",&a[i]);
+   }
+   for (i=0;i<5;i++)
+       printf("\n array elements at index %d is %d ",i,a[i]);
+       for (i=4;i>=0;i--)
+       printf("\n reverse array elements at index %d is %d",i,a[i]);
+return 0;
+}

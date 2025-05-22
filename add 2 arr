@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main () {
+    int arr1[5],arr2[5],sumarr[5];
+    int i ;
+    for(i=0;i<5;i++){
+    printf("enter 1st  arr ele :  ");
+    scanf("%d",&arr1[i]);}
+    for(i=0;i<5;i++){
+    printf("enter 2nd arr ele : ");
+    scanf("%d",&arr2[i]);}
+    for(i=0;i<5;i++){
+   sumarr[i]=arr1[i]+arr2[i];
+   printf("sumarr %d is %d ",i,sumarr[i]);}
+   return 0;
+}

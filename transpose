@@ -1,0 +1,30 @@
+#include<stdio.h> // Include standard input-output library
+
+int main() { 
+    int a[2][3], i, j; // Declare a 2D array and loop variables
+
+    printf("Enter matrix elements:\n"); // Prompt user for input
+    for(i = 0; i < 2; i++) { // Loop through rows
+        for(j = 0; j < 3; j++) { // Loop through columns
+            scanf("%d", &a[i][j]); // Store input in matrix
+        }
+    }
+
+    printf("\nMatrix form:\n"); // Display original matrix
+    for(i = 0; i < 2; i++) { // Iterate over rows
+        for(j = 0; j < 3; j++) { // Iterate over columns
+            printf("%d ", a[i][j]); // Print elements with space
+        }
+        printf("\n"); // Move to next row
+    }
+
+    printf("\nTranspose form:\n"); // Display transpose of matrix
+    for(i = 0; i < 3; i++) { // Loop over columns (now rows in transpose)
+        for(j = 0; j < 2; j++) { // Loop over rows (now columns in transpose)
+            printf("%d ", a[j][i]); // Print transposed element
+        }
+        printf("\n"); // Move to next row
+    }
+
+    return 0; // End program successfully
+}

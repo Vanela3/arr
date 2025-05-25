@@ -1,0 +1,15 @@
+#include<stdio.h>
+
+int main () {
+    int arr[7] = {10, 30, 0, 40, 60, 50, 80};
+    int large = arr[0];
+
+    for(int i = 1; i < 7; i++) {
+        if(arr[i] > large) 
+            large = arr[i];  // Update largest number
+    }
+
+    printf("Largest element: %d\n", large);  // Print only the final largest value
+
+    return 0;
+}

@@ -1,0 +1,28 @@
+#include <stdio.h>  // Include standard library for input/output
+
+// Function to reverse the array
+void reverse_array(int arr[], int len) {  
+    for (int i = 0; i < len / 2; i++) {  // Loop runs till the middle of the array
+        int temp = arr[i];  // Store current element temporarily
+        arr[i] = arr[len - i - 1];  // Swap element from opposite end
+        arr[len - i - 1] = temp;  // Assign stored value to opposite index
+    }
+}
+
+int main() {
+    int len, arr[100];  // Declare array and its size variable
+
+    printf("Enter number of elements: ");  // Prompt user for array size
+    scanf("%d", &len);  // Read array size
+
+    printf("Enter elements: ");  // Ask for array elements
+    for (int i = 0; i < len; i++) scanf("%d", &arr[i]);  // Read array elements into arr[]
+
+    reverse_array(arr, len);  // Call function to reverse the array
+
+    printf("Reversed array: ");  // Print reversed array elements
+    for (int i = 0; i < len; i++) printf("%d ", arr[i]);  // Display reversed elements
+    printf("\n");  // Print newline for better formatting
+
+    return 0;  // Indicate successful program execution
+}

@@ -1,0 +1,24 @@
+#include <stdio.h>  // Include standard I/O library for input/output functions
+
+int main() {
+    int len, arr[100], temp;  // Declare variables: array size, array, and temporary storage
+
+    printf("Enter number of elements: ");  // Prompt user for array size
+    scanf("%d", &len);  // Read array size input
+
+    printf("Enter elements: ");  // Prompt user to enter array elements
+    for (int i = 0; i < len; i++) scanf("%d", &arr[i]);  // Store user input in the array
+
+    // Reverse the array by swapping elements
+    for (int i = 0; i < len / 2; i++) {
+        temp = arr[i];  // Store current element temporarily
+        arr[i] = arr[len - i - 1];  // Swap first and last element
+        arr[len - i - 1] = temp;  // Assign stored value to opposite index
+    }
+
+    printf("Reversed array: ");  // Print reversed array
+    for (int i = 0; i < len; i++) printf("%d ", arr[i]);  // Display array elements after reversal
+    printf("\n");  // Print newline for better formatting
+
+    return 0;  // Indicate successful execution
+}
